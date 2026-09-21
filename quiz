@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Το Πρώτο μου Κουίζ!</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f8ff; text-align: center; padding: 20px; }
+        .quiz-container { background: white; max-width: 500px; margin: 40px auto; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h1 { color: #1e90ff; }
+        .btn { background-color: #e7e7e7; color: black; border: none; padding: 12px 20px; margin: 10px; font-size: 16px; cursor: pointer; border-radius: 8px; transition: 0.2s; width: 80%; }
+        .btn:hover { background-color: #ddd; }
+        #result { margin-top: 20px; font-size: 18px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>💡 Κουίζ Πληροφορικής</h1>
+    <p id="question">Όταν μια λάμπα είναι σβηστή στον υπολογιστή, με ποιο ψηφίο αντιστοιχεί;</p>
+    
+    <button class="btn" onclick="checkAnswer(0)">Το ψηφίο 0</button>
+    <button class="btn" onclick="checkAnswer(1)">Το ψηφίο 1</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function checkAnswer(choice) {
+        const resultDiv = document.getElementById('result');
+        if (choice === 0) {
+            resultDiv.innerHTML = "🎉 Μπράβο! Σωστή απάντηση. Το 0 σημαίνει σβηστό.";
+            resultDiv.style.color = "green";
+        } else {
+            resultDiv.innerHTML = "❌ Χμ, ξαναπροσπάθησε! Το 1 σημαίνει αναμμένο.";
+            resultDiv.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
